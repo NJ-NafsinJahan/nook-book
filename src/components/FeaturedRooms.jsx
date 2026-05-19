@@ -1,16 +1,12 @@
 import { Button } from "@heroui/react";
 import { ArrowRight } from "lucide-react";
 import FeaturedCard from "./FeaturedCard";
+import { fetchFeaturedRooms } from "@/lib/rooms/data";
 
 // import FeaturedCard from "./FeaturedCard";
-const fetchRooms = async () => {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/rooms`);
-  const data = await res.json();
-  return data || [];
-};
 
 const FeaturedRooms = async () => {
-  const rooms = await fetchRooms();
+  const rooms = await fetchFeaturedRooms();
   console.log(rooms);
   return (
     <section className="py-24 bg-slate-50">
@@ -45,9 +41,9 @@ const FeaturedRooms = async () => {
           <FeaturedCard />
         </div> */}
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {rooms?.map((room) => (
-            <FeaturedCard key={room?._id} />
+            <FeaturedCard key={room?._id} room={room} />
           ))}
         </div>
       </div>

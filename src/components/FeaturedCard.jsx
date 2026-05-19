@@ -5,6 +5,7 @@ import Link from "next/link";
 
 const FeaturedCard = ({ room }) => {
   const {
+    _id,
     roomName,
     roomImage,
     seatCapacity,
@@ -65,7 +66,7 @@ const FeaturedCard = ({ room }) => {
         </div>
 
         {/* btn */}
-        <Link href="#">
+        <Link href={`/rooms/${_id}`}>
           <Button
             fullWidth
             className="font-normal text-[16px] rounded-full px-8 shadow-lg bg-linear-to-br from-[#FF006E] via-[#FF3D7F] to-[#FF5E62] shadow-pink-600/20"

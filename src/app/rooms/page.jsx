@@ -1,14 +1,15 @@
 import AllRoomsHeader from "@/components/AllRoomsHeader";
 import FeaturedCard from "@/components/FeaturedCard";
+import { fetchRooms } from "@/lib/rooms/data";
 import { Button } from "@heroui/react";
 import { DoorOpen, Filter } from "lucide-react";
 import React from "react";
 
-const fetchRooms = async () => {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/rooms`);
-  const data = await res.json();
-  return data || [];
-};
+// const fetchRooms = async () => {
+//   const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/rooms`);
+//   const data = await res.json();
+//   return data || [];
+// };
 
 const RoomsPage = async () => {
   const rooms = await fetchRooms();
