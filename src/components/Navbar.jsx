@@ -42,7 +42,7 @@ export function Navbar() {
                 <MapPinHouse className="w-6 h-6 font-bold text-white " />
               </div>
               <span className="font-extrabold text-2xl tracking-tight text-[#1E103F]">
-                NookBook
+                BooKnooK
               </span>
             </Link>
           </div>
@@ -57,7 +57,7 @@ export function Navbar() {
               Home
             </Link>
             <Link
-              href="/courses"
+              href="/rooms"
               className="font-medium text-[#1D1B36] hover:text-[#FF006E] transition-colors"
             >
               Rooms
@@ -106,7 +106,7 @@ export function Navbar() {
                 /> */}
                 <div className="text-left hidden lg:block">
                   <p className="text-sm font-bold truncate max-w-25">
-                    Nazmus Sakib
+                    {/* Nazmus Sakib */}
                   </p>
                   <p className="text-[10px] text-slate-500">Student</p>
                 </div>
@@ -115,7 +115,7 @@ export function Navbar() {
                 <div className="px-4 py-3 border-b border-slate-100">
                   <p className="font-bold text-sm">Welcome back!</p>
                   <p className="text-xs truncate text-slate-500">
-                    sakib@gmail.com
+                    {/* sakib@gmail.com */}
                   </p>
                 </div>
                 <Link
@@ -166,13 +166,13 @@ export function Navbar() {
             href="/courses"
             className="block px-4 py-3 text-base font-medium text-slate-900 hover:bg-slate-50 rounded-xl"
           >
-            Courses
+            Rooms
           </Link>
           <Link
             href="/add-course"
             className="block px-4 py-3 text-base font-medium text-slate-900 hover:bg-slate-50 rounded-xl"
           >
-            Add Course
+            Add Room
           </Link>
           <Link
             href="/dashboard"
@@ -189,7 +189,7 @@ export function Navbar() {
               </Link>
               <Link href="/register">
                 <Button href="/register" color="primary" className="rounded-xl">
-                  Join Free
+                  Register
                 </Button>
               </Link>
             </div>

@@ -1,0 +1,68 @@
+[
+  {
+    "roomImage": "https://images.unsplash.com/photo-1497366754035-f200968a6e72",
+    "roomName": "Innovation Hub",
+    "shortDescription": "Modern collaborative workspace with natural lighting, ergonomic seating, and smart meeting tools.",
+    "floor": "Floor 3",
+    "seatCapacity": "2–4 people",
+    "hourlyRate": "$5/hr",
+    "amenities": ["Whiteboard", "Wi-Fi", "Power Outlets", "Air Conditioning"],
+    "viewDetails": true
+  },
+  {
+    "roomImage": "https://images.unsplash.com/photo-1497366412874-3415097a27e7",
+    "roomName": "Creative Corner",
+    "shortDescription": "Compact and cozy room designed for brainstorming sessions and focused team discussions.",
+    "floor": "Floor 2",
+    "seatCapacity": "1–4 people",
+    "hourlyRate": "$8/hr",
+    "amenities": ["Projector", "Wi-Fi", "Air Conditioning"],
+    "viewDetails": true
+  },
+  {
+    "roomImage": "https://images.unsplash.com/photo-1524758631624-e2822e304c36",
+    "roomName": "Focus Room",
+    "shortDescription": "Quiet workspace ideal for interviews, remote meetings, and distraction-free productivity.",
+    "floor": "Floor 1",
+    "seatCapacity": "1–2 people",
+    "hourlyRate": "$4/hr",
+    "amenities": ["Quiet Zone", "Wi-Fi", "Power Outlets"],
+    "viewDetails": true
+  },
+  {
+    "roomImage": "https://images.unsplash.com/photo-1504384308090-c894fdcc538d",
+    "roomName": "Executive Suite",
+    "shortDescription": "Premium meeting room equipped with advanced presentation tools and luxury seating arrangements.",
+    "floor": "Floor 5",
+    "seatCapacity": "6–10 people",
+    "hourlyRate": "$15/hr",
+    "amenities": [
+      "Projector",
+      "Whiteboard",
+      "Wi-Fi",
+      "Air Conditioning",
+      "Power Outlets"
+    ],
+    "viewDetails": true
+  },
+  {
+    "roomImage": "https://images.unsplash.com/photo-1517502884422-41eaead166d4",
+    "roomName": "Startup Space",
+    "shortDescription": "Flexible team room tailored for startups, workshops, and collaborative project planning sessions.",
+    "floor": "Floor 4",
+    "seatCapacity": "3–6 people",
+    "hourlyRate": "$12/hr",
+    "amenities": ["Whiteboard", "Projector", "Wi-Fi", "Quiet Zone"],
+    "viewDetails": true
+  },
+  {
+    "roomImage": "https://images.unsplash.com/photo-1497366216548-37526070297c",
+    "roomName": "Brainstorm Lab",
+    "shortDescription": "Dynamic and colorful environment built to inspire creativity, innovation, and productive teamwork.",
+    "floor": "Floor 6",
+    "seatCapacity": "5–8 people",
+    "hourlyRate": "$10/hr",
+    "amenities": ["Whiteboard", "Wi-Fi", "Power Outlets", "Air Conditioning"],
+    "viewDetails": true
+  }
+]

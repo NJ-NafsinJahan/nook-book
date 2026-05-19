@@ -2,7 +2,6 @@ import Image from "next/image";
 import React from "react";
 import { FaChalkboard, FaWifi } from "react-icons/fa";
 import { LuProjector } from "react-icons/lu";
-import { PiHandCoins } from "react-icons/pi";
 import { TbAirConditioning } from "react-icons/tb";
 
 const StaticFirst = () => {
