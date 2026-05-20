@@ -27,7 +27,7 @@ const RoomsPage = async () => {
           </h2>
           <Button
             variant="outline"
-            startcontent={<Filter className="w-4 h-4" />}
+            startContent={<Filter className="w-4 h-4" />}
             className="rounded-full font-bold"
           >
             Filters

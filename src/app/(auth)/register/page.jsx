@@ -22,9 +22,16 @@ export default function RegisterPage() {
     const registerData = Object.fromEntries(formData.entries());
     // console.log(registerData);
 
+    // const { data, error } = await signUp.email({
+    //   name: registerData.name,
+    //   email: registerData.email,
+    //   password: registerData.password,
+    //   callbackURL: "/",
+    // });
+
     const { data, error } = await signUp.email({
       ...registerData,
-      //   callbackURL: "/",
+      callbackURL: "/",
     });
 
     // if error
@@ -32,7 +39,9 @@ export default function RegisterPage() {
       toast.error("Registration failed");
       return;
     }
-    router.push("/");
+    toast.success("Registration successful! Please login.");
+
+    router.push("/login");
   };
 
   return (
@@ -67,7 +76,7 @@ export default function RegisterPage() {
                   required
                   placeholder="Enter your name"
                   name="name"
-                  startcontent={<User className="w-5 h-5 text-slate-400" />}
+                  startContent={<User className="w-5 h-5 text-slate-400" />}
                   className="border-2 border-slate-200 hover:border-pink-600/50 focus-within:border-pink-600 transition-all duration-300 h-14 bg-white w-full rounded-2xl"
                 />
               </div>
@@ -85,7 +94,7 @@ export default function RegisterPage() {
                   placeholder="Enter your email"
                   type="email"
                   name="email"
-                  startcontent={<Mail className="w-5 h-5 text-slate-400" />}
+                  startContent={<Mail className="w-5 h-5 text-slate-400" />}
                   className="border-2 border-slate-200 hover:border-pink-600/50 focus-within:border-pink-600 transition-all duration-300 h-14 bg-pink w-full rounded-2xl"
                 />
               </div>
@@ -102,7 +111,7 @@ export default function RegisterPage() {
                   placeholder="https://images.com/..."
                   type="url"
                   name="image"
-                  startcontent={<User className="w-5 h-5 text-slate-400" />}
+                  startContent={<User className="w-5 h-5 text-slate-400" />}
                   className="border-2 border-slate-200 hover:border-pink-600/50 focus-within:border-pink-600 transition-all duration-300 h-14 bg-white w-full rounded-2xl"
                 />
               </div>
@@ -120,18 +129,17 @@ export default function RegisterPage() {
                   placeholder="••••••••"
                   type="password"
                   name="password"
-                  startcontent={<Lock className="w-5 h-5 text-slate-400" />}
+                  startContent={<Lock className="w-5 h-5 text-slate-400" />}
                   className="border-2 border-slate-200 hover:border-pink-600/50 focus-within:border-pink-600 transition-all duration-300 h-14 bg-white w-full rounded-2xl"
                 />
               </div>
 
               <Button
-                color="primary"
                 type="submit"
                 // isLoading={loading}
-                className="w-full h-14 text-lg font-black rounded-2xl shadow-xl shadow-blue-600/20 group"
+                className="w-full h-14 text-lg font-normal rounded-2xl shadow-xl bg-linear-to-br from-[#FF006E] via-[#FF3D7F] to-[#FF5E62] shadow-pink-600/20 group"
               >
-                Create Account{" "}
+                Register{" "}
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
             </form>
@@ -143,7 +151,7 @@ export default function RegisterPage() {
                   href="/login"
                   className="text-[#FF006E] text-[18px] hover:underline underline-offset-4 transition-all"
                 >
-                  Sign in
+                  Login
                 </Link>
               </p>
             </div>

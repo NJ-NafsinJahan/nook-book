@@ -3,7 +3,7 @@
 import { Button, Input } from "@heroui/react";
 
 import Link from "next/link";
-
+import toast from "react-hot-toast";
 import { Mail, Lock, ArrowRight } from "lucide-react";
 
 import Image from "next/image";
@@ -27,7 +27,7 @@ export default function LoginPage() {
 
     // if error
     if (error) {
-      toast.error("Registration failed");
+      toast.error("Login failed");
       return;
     }
     // router.push("/");
@@ -93,7 +93,7 @@ export default function LoginPage() {
                   placeholder="Enter your email"
                   type="email"
                   name="email"
-                  startontent={<Mail className="w-4 h-4 text-slate-400" />}
+                  startContent={<Mail className="w-4 h-4 text-slate-400" />}
                   className="border-2 border-slate-200 hover:border-pink-600/50 focus-within:border-pink-600 transition-all duration-300 h-14 bg-white w-full rounded-2xl "
                 />
               </div>
@@ -111,7 +111,7 @@ export default function LoginPage() {
                   placeholder="••••••••"
                   type="password"
                   name="password"
-                  startcontent={<Lock className="w-5 h-5 text-slate-400" />}
+                  startContent={<Lock className="w-5 h-5 text-slate-400" />}
                   className="border-2 border-slate-200 hover:border-pink-600/50 focus-within:border-pink-600 transition-all duration-300 h-14 bg-white w-full rounded-2xl "
                 />
               </div>
@@ -128,7 +128,7 @@ export default function LoginPage() {
                 type="submit"
                 className="w-full h-10 text-[20px] font-bold  bg-linear-to-r from-[#FF006E] to-[#FF5E62] rounded-2xl shadow-xl shadow-pink-600/20 group"
               >
-                Sign In{" "}
+                LogIn{" "}
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
             </form>

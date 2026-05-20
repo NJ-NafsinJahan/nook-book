@@ -2,12 +2,23 @@
 const nextConfig = {
   /* config options here */
   reactCompiler: true,
+  // images: {
+  //   remotePatterns: [
+  //     {
+  //       protocol: "https",
+  //       hostname: "i.ibb.co.com",
+  //       // domains: ["img.magnific.com"],
+  //     },
+  //   ],
+  // },
+
   images: {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "i.ibb.co.com",
-        // domains: ["img.magnific.com"],
+        hostname: "**",
+        port: "",
+        pathname: "**",
       },
     ],
   },
