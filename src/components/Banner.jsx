@@ -7,8 +7,6 @@ export default function Banner() {
       className="relative min-h-screen bg-cover bg-center flex items-center justify-center"
       style={{
         backgroundImage: `url(${bannerImg.src})`,
-        // backgroundImage:
-        //   "url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=2070&auto=format&fit=crop')",
       }}
     >
       {/* Overlay */}

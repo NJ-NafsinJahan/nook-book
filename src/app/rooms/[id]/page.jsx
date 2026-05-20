@@ -2,6 +2,7 @@ import { Button, Chip } from "@heroui/react";
 import { BookOpen, Clock, BarChart, Users, Layers2 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { FaArrowLeft } from "react-icons/fa6";
 
 const fetchSingleRoom = async (id) => {
   const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/rooms/${id}`);
@@ -24,15 +25,12 @@ export default async function CourseDetails({ params }) {
   } = room;
   console.log(room);
 
-  const featuredItems = [
-    { icon: Clock, label: room.duration || "12h 30m" },
-    // { icon: BarChart, label: room.level || "Beginner" },
-    // { icon: BookOpen, label: `${room.totalLessons || 24} Lessons` },
-    // { icon: Users, label: `${room.enrollmentCount || 0} Students` },
-  ];
   return (
     <div className="max-w-7xl mx-auto px-4 mb-4 py-12 sm:px-6 lg:px-8">
-      <h1> Room Details</h1>
+      <Link href="#" className="flex gap-2 mb-6">
+        {" "}
+        <FaArrowLeft /> Go Back
+      </Link>
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-12 items-start">
         <div className="lg:col-span-2 space-y-8">
           <div className="relative group overflow-hidden rounded shadow-2xl aspect-video">
@@ -94,12 +92,10 @@ export default async function CourseDetails({ params }) {
                 fullWidth
                 className="font-normal text-[16px] rounded-full px-8 shadow-lg bg-linear-to-br from-[#FF006E] via-[#FF3D7F] to-[#FF5E62] shadow-pink-600/20"
               >
-                See Details
+                Book Now
               </Button>
             </Link>
-            <p className="text-center text-xs text-slate-500 font-bold">
-              30-Day Money-Back Guarantee • Secure Payment
-            </p>
+            <p>Book a room. Focus better.</p>
           </div>
         </div>
       </div>
