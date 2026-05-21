@@ -1,18 +1,29 @@
+import { auth } from "@/lib/auth";
 import { Button, Chip } from "@heroui/react";
 import { BookOpen, Clock, BarChart, Users, Layers2 } from "lucide-react";
+import { headers } from "next/headers";
 import Image from "next/image";
 import Link from "next/link";
 import { FaArrowLeft } from "react-icons/fa6";
 
-const fetchSingleRoom = async (id) => {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/rooms/${id}`);
+const fetchSingleRoom = async (id, token) => {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/rooms/${id}`, {
+    headers: {
+      authorization: `Bearer ${token}` || "",
+    },
+  });
   const data = await res.json();
   return data || {};
 };
 
-export default async function CourseDetails({ params }) {
+export default async function RoomDetails({ params }) {
   const { id } = await params;
-  const room = await fetchSingleRoom(id);
+  const { token } = await auth.api.getToken({
+    headers: await headers(), // headers containing the user's session token
+  });
+  console.log(token, "token from Room details");
+
+  const room = await fetchSingleRoom(id, token);
   const {
     _id,
     roomName,
