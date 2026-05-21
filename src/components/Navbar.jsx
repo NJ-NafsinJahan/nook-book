@@ -73,7 +73,7 @@ export function Navbar() {
               Rooms
             </Link>
             <Link
-              href="/add-course"
+              href="/add-room"
               className="font-medium text-[#1D1B36] hover:text-[#FF006E] transition-colors"
             >
               Add Rooms

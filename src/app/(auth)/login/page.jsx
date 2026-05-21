@@ -7,7 +7,7 @@ import toast from "react-hot-toast";
 import { Mail, Lock, ArrowRight } from "lucide-react";
 
 import Image from "next/image";
-import { signIn } from "@/lib/auth-client";
+import { authClient, signIn } from "@/lib/auth-client";
 
 export default function LoginPage() {
   const handleLogin = async (e) => {
@@ -24,6 +24,8 @@ export default function LoginPage() {
       ...loginData,
       callbackURL: "/",
     });
+    // const { data: tokenData } = await authClient.token();
+    // console.log(tokenData);
 
     // if error
     if (error) {
